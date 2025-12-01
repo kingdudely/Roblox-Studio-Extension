@@ -46,7 +46,7 @@ if ("placeId" in searchParams) {
                     const editorValue = editor.getValue();
                     const newPlaceBinary = xml_to_binary(textEncoder.encode(editorValue));
                     const placeFile = new File([newPlaceBinary], "place.rbxl", { type: 'application/octet-stream' });
-                    const placeIdUpload = Number(formData.get("placeId"));
+                    const placeIdUpload = parseNumber(formData.get("placeId"));
                     let shouldPublish;
 
                     switch (submitter.value) {
