@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="monaco/loader.js"></script>
+		<script src="index.js" type="module" defer></script>
+		<title>ROBLOX Studio</title>
+	</head>
+
+	<body>
+		<form>
+			<label>
+				Place ID to edit:
+				<input type="text" name="placeId" id="placeIdEdit" placeholder="Place ID" required/>
+			</label>
+			<button type="submit">Edit</button>
+		</form>
+		<br/>
+		<form id="editForm" hidden>
+			<div id="monaco" style="resize: both; overflow: auto; height: 200px; width:500px;"></div>
+			<br/>
+			<label>
+				Place ID to upload to:
+				<input type="text" name="placeId" id="placeIdUpload" placeholder="Place ID" required/>
+			</label>
+			<button type="submit" name="upload" value="save">Save</button>
+			<button type="submit" name="upload" value="publish">Publish</button>
+			<hr/>
+			<h2>Helpful links</h2>
+			<a href="https://dom.rojo.space/xml.html" target="_blank">Roblox XML specification</a>
+		</form>
+	</body>
+</html>
